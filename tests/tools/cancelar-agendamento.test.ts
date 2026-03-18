@@ -25,7 +25,7 @@ describe("criarToolCancelarAgendamento", () => {
   test("cancela agendamento com sucesso", async () => {
     const tool = criarToolCancelarAgendamento(contexto);
     const result = await tool.invoke({
-      idProfissional: "dra-ana-costa",
+      idProfissional: "dra-ana-cristina",
       idEvento: "evento-123",
     });
     const parsed = JSON.parse(result);
@@ -47,7 +47,7 @@ describe("criarToolCancelarAgendamento", () => {
   test("salva motivoCancelamento quando fornecido", async () => {
     const tool = criarToolCancelarAgendamento(contexto);
     await tool.invoke({
-      idProfissional: "dra-ana-costa",
+      idProfissional: "dra-ana-cristina",
       idEvento: "evento-123",
       motivoCancelamento: "paciente desistiu",
     });
@@ -64,7 +64,7 @@ describe("criarToolCancelarAgendamento", () => {
   test("não chama chatwoot quando motivoCancelamento não fornecido", async () => {
     const tool = criarToolCancelarAgendamento(contexto);
     await tool.invoke({
-      idProfissional: "dra-ana-costa",
+      idProfissional: "dra-ana-cristina",
       idEvento: "evento-123",
     });
     expect(mockFetch).not.toHaveBeenCalled();

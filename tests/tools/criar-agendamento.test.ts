@@ -18,7 +18,7 @@ const baseInput = {
   duracaoMinutos: 60,
   titulo: "João Silva",
   descricao: "Consulta de rotina",
-  idProfissional: "dra-ana-costa",
+  idProfissional: "dra-ana-cristina",
 };
 
 beforeEach(() => {

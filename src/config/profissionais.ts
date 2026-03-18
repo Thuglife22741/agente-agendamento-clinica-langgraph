@@ -20,60 +20,18 @@ const calendarIds: Record<string, string> = (() => {
 })();
 
 export const profissionais: Record<string, Profissional> = {
-  "dra-ana-costa": {
-    id: "dra-ana-costa",
-    nome: "Dra. Ana Costa",
+  "dra-ana-cristina": {
+    id: "dra-ana-cristina",
+    nome: "Dra. Ana Cristina",
     especialidade: "Clínico Geral, Limpeza",
-    calendarId: calendarIds["dra-ana-costa"] ?? "dra-ana-costa@clinic.com",
+    calendarId: calendarIds["dra-ana-cristina"] ?? "dra-ana-cristina@clinic.com",
     disponibilidade: {
-      1: [{ inicio: "08:00", fim: "12:00" }, { inicio: "14:00", fim: "18:00" }], // segunda
-      2: [{ inicio: "08:00", fim: "12:00" }, { inicio: "14:00", fim: "18:00" }], // terça
-      3: [{ inicio: "08:00", fim: "12:00" }, { inicio: "14:00", fim: "18:00" }], // quarta
-      4: [{ inicio: "08:00", fim: "12:00" }, { inicio: "14:00", fim: "18:00" }], // quinta
-      5: [{ inicio: "08:00", fim: "12:00" }, { inicio: "14:00", fim: "18:00" }], // sexta
+      1: [{ inicio: "08:00", fim: "20:00" }], // segunda
+      2: [{ inicio: "08:00", fim: "20:00" }], // terça
+      3: [{ inicio: "08:00", fim: "20:00" }], // quarta
+      4: [{ inicio: "08:00", fim: "20:00" }], // quinta
+      5: [{ inicio: "08:00", fim: "20:00" }], // sexta
       6: [{ inicio: "08:00", fim: "11:00" }], // sábado
-    },
-  },
-  "dr-ricardo-lima": {
-    id: "dr-ricardo-lima",
-    nome: "Dr. Ricardo Lima",
-    especialidade: "Implantes, Cirurgia",
-    calendarId: calendarIds["dr-ricardo-lima"] ?? "dr-ricardo-lima@clinic.com",
-    disponibilidade: {
-      1: [{ inicio: "08:00", fim: "12:00" }, { inicio: "14:00", fim: "18:00" }],
-      2: [{ inicio: "08:00", fim: "12:00" }, { inicio: "14:00", fim: "18:00" }],
-      3: [{ inicio: "08:00", fim: "12:00" }, { inicio: "14:00", fim: "18:00" }],
-      4: [{ inicio: "08:00", fim: "12:00" }, { inicio: "14:00", fim: "18:00" }],
-      5: [{ inicio: "08:00", fim: "12:00" }, { inicio: "14:00", fim: "18:00" }],
-      6: [{ inicio: "08:00", fim: "11:00" }],
-    },
-  },
-  "dra-beatriz-souza": {
-    id: "dra-beatriz-souza",
-    nome: "Dra. Beatriz Souza",
-    especialidade: "Ortodontia",
-    calendarId: calendarIds["dra-beatriz-souza"] ?? "dra-beatriz-souza@clinic.com",
-    disponibilidade: {
-      1: [{ inicio: "08:00", fim: "12:00" }, { inicio: "14:00", fim: "18:00" }],
-      2: [{ inicio: "08:00", fim: "12:00" }, { inicio: "14:00", fim: "18:00" }],
-      3: [{ inicio: "08:00", fim: "12:00" }, { inicio: "14:00", fim: "18:00" }],
-      4: [{ inicio: "08:00", fim: "12:00" }, { inicio: "14:00", fim: "18:00" }],
-      5: [{ inicio: "08:00", fim: "12:00" }, { inicio: "14:00", fim: "18:00" }],
-      6: [{ inicio: "08:00", fim: "11:00" }],
-    },
-  },
-  "dr-felipe-torres": {
-    id: "dr-felipe-torres",
-    nome: "Dr. Felipe Torres",
-    especialidade: "Endodontia (Canal)",
-    calendarId: calendarIds["dr-felipe-torres"] ?? "dr-felipe-torres@clinic.com",
-    disponibilidade: {
-      1: [{ inicio: "08:00", fim: "12:00" }, { inicio: "14:00", fim: "18:00" }],
-      2: [{ inicio: "08:00", fim: "12:00" }, { inicio: "14:00", fim: "18:00" }],
-      3: [{ inicio: "08:00", fim: "12:00" }, { inicio: "14:00", fim: "18:00" }],
-      4: [{ inicio: "08:00", fim: "12:00" }, { inicio: "14:00", fim: "18:00" }],
-      5: [{ inicio: "08:00", fim: "12:00" }, { inicio: "14:00", fim: "18:00" }],
-      6: [{ inicio: "08:00", fim: "11:00" }],
     },
   },
 };

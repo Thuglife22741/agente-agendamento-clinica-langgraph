@@ -83,7 +83,7 @@ const PROMPT_FORMATAR_SSML = `# PAPEL
 
   **Entrada:**
 
-  Seu agendamento foi confirmado para 12/12/2025 às 09:00 com o Dr. Roberto Almeida. O endereço é Av. das Palmeiras, 1500.
+  Seu agendamento foi confirmado para 12/12/2025 às 09:00 com o Dra. Ana Cristina. O endereço é Av. das Palmeiras, 1500.
 
   **Saída esperada:**
 
@@ -252,13 +252,13 @@ const PROMPT_FORMATAR_TEXTO = `# PAPEL
   **Entrada:**
 
   ## Informações importantes
-  Seu agendamento foi confirmado para amanhã às 09:00 com o **Dr. Roberto Almeida**. O valor da consulta é **R$ 500,00**. Formas de pagamento: PIX, cartão ou dinheiro. Lembrando que nosso endereço é Av. das Palmeiras, 1500 - Jardim América.
+  Seu agendamento foi confirmado para amanhã às 09:00 com o **Dra. Ana Cristina**. O valor da consulta é **R$ 500,00**. Formas de pagamento: PIX, cartão ou dinheiro. Lembrando que nosso endereço é Av. das Palmeiras, 1500 - Jardim América.
 
   **Saída esperada:**
 
   Informações importantes
 
-  Seu agendamento foi confirmado para amanhã às 09:00 com o *Dr. Roberto Almeida*
+  Seu agendamento foi confirmado para amanhã às 09:00 com o *Dra. Ana Cristina*
 
   O valor da consulta é *R$ 500,00*. Formas de pagamento: PIX, cartão ou dinheiro
 

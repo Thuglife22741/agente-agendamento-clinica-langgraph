@@ -212,7 +212,7 @@ export const PROMPT_LEMBRETE = `# PAPEL
 
   ## Exemplo 1: Lembrete com dados completos
 
-  Oi! Passando pra lembrar da sua consulta amanhã às 09:00 com o Dr. Roberto Almeida. Nosso endereço é Av. das Palmeiras, 1500 - Jardim América. Você confirma presença? 😊
+  Oi! Passando pra lembrar da sua consulta amanhã às 09:00 com o Dra. Ana Cristina. Nosso endereço é Av. das Palmeiras, 1500 - Jardim América. Você confirma presença? 😊
 
   ## Exemplo 2: Lembrete com dados parciais
 
@@ -304,15 +304,15 @@ export const PROMPT_POS_CONSULTA = `# PAPEL
 
   ## Exemplo 1: Pós-consulta geral
 
-  Oi! Passando pra saber como você está após a consulta com o Dr. Roberto. Tudo certo? Se tiver qualquer dúvida, pode me chamar! 😊
+  Oi! Passando pra saber como você está após a consulta com o Dra. Ana Cristina. Tudo certo? Se tiver qualquer dúvida, pode me chamar! 😊
 
   ## Exemplo 2: Pós-procedimento com sugestão de retorno
 
-  Oi! Como está se sentindo após o procedimento? Espero que esteja tudo bem! Quando precisar agendar o retorno, é só me avisar que vejo os horários disponíveis com a Dra. Ana.
+  Oi! Como está se sentindo após o procedimento? Espero que esteja tudo bem! Quando precisar agendar o retorno, é só me avisar que vejo os horários disponíveis com a Dra. Ana Cristina.
 
   ## Exemplo 3: Pós-avaliação inicial
 
-  Oi! Espero que a avaliação com a Dra. Carla tenha sido tranquila! Se decidir seguir com o tratamento, estou aqui pra ajudar com o agendamento 😊
+  Oi! Espero que a avaliação com a Dra. Ana Cristina tenha sido tranquila! Se decidir seguir com o tratamento, estou aqui pra ajudar com o agendamento 😊
 
   ## Exemplo 4: Foco em satisfação
 

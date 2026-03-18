@@ -24,7 +24,7 @@ describe("buscarJanelasDisponiveis", () => {
 
   test("rejeita tamanho de janela inválido", async () => {
     const result = await buscarJanelasDisponiveis.invoke({
-      idProfissional: "dra-ana-costa",
+      idProfissional: "dra-ana-cristina",
       tamanhoJanelaMinutos: 7,
       periodoInicio: FUTURE_MONDAY_08,
       periodoFim: FUTURE_MONDAY_12,
@@ -35,7 +35,7 @@ describe("buscarJanelasDisponiveis", () => {
 
   test("aceita tamanho de janela válido (30 min)", async () => {
     const result = await buscarJanelasDisponiveis.invoke({
-      idProfissional: "dra-ana-costa",
+      idProfissional: "dra-ana-cristina",
       tamanhoJanelaMinutos: 30,
       periodoInicio: FUTURE_MONDAY_08,
       periodoFim: FUTURE_MONDAY_12,
@@ -47,7 +47,7 @@ describe("buscarJanelasDisponiveis", () => {
 
   test("rejeita período início no passado", async () => {
     const result = await buscarJanelasDisponiveis.invoke({
-      idProfissional: "dra-ana-costa",
+      idProfissional: "dra-ana-cristina",
       tamanhoJanelaMinutos: 30,
       periodoInicio: "2020-01-01T08:00:00-03:00",
       periodoFim: "2020-01-01T18:00:00-03:00",
@@ -69,7 +69,7 @@ describe("buscarJanelasDisponiveis", () => {
 
   test("retorna janelas disponíveis em dia útil (segunda-feira)", async () => {
     const result = await buscarJanelasDisponiveis.invoke({
-      idProfissional: "dra-ana-costa",
+      idProfissional: "dra-ana-cristina",
       tamanhoJanelaMinutos: 60,
       periodoInicio: FUTURE_MONDAY_08,
       periodoFim: FUTURE_MONDAY_12,
@@ -91,7 +91,7 @@ describe("buscarJanelasDisponiveis", () => {
     ] as Awaited<ReturnType<typeof import("../../src/services/google-calendar.ts").listarEventos>>);
 
     const result = await buscarJanelasDisponiveis.invoke({
-      idProfissional: "dra-ana-costa",
+      idProfissional: "dra-ana-cristina",
       tamanhoJanelaMinutos: 60,
       periodoInicio: FUTURE_MONDAY_08,
       periodoFim: FUTURE_MONDAY_12,
@@ -103,7 +103,7 @@ describe("buscarJanelasDisponiveis", () => {
 
   test("respeita limite de amostras", async () => {
     const result = await buscarJanelasDisponiveis.invoke({
-      idProfissional: "dra-ana-costa",
+      idProfissional: "dra-ana-cristina",
       tamanhoJanelaMinutos: 30,
       periodoInicio: FUTURE_MONDAY_08,
       periodoFim: FUTURE_MONDAY_18,
@@ -116,7 +116,7 @@ describe("buscarJanelasDisponiveis", () => {
 
   test("não retorna janelas fora do horário de disponibilidade (sábado após 11h)", async () => {
     const result = await buscarJanelasDisponiveis.invoke({
-      idProfissional: "dra-ana-costa",
+      idProfissional: "dra-ana-cristina",
       tamanhoJanelaMinutos: 60,
       periodoInicio: FUTURE_SAT_11,
       periodoFim: FUTURE_SAT_12,
@@ -128,7 +128,7 @@ describe("buscarJanelasDisponiveis", () => {
 
   test("rejeita granularidade inválida (ex: 1 minuto)", async () => {
     const result = await buscarJanelasDisponiveis.invoke({
-      idProfissional: "dra-ana-costa",
+      idProfissional: "dra-ana-cristina",
       tamanhoJanelaMinutos: 30,
       periodoInicio: FUTURE_MONDAY_08,
       periodoFim: FUTURE_MONDAY_12,
@@ -140,7 +140,7 @@ describe("buscarJanelasDisponiveis", () => {
 
   test("aceita granularidade válida (30 min)", async () => {
     const result = await buscarJanelasDisponiveis.invoke({
-      idProfissional: "dra-ana-costa",
+      idProfissional: "dra-ana-cristina",
       tamanhoJanelaMinutos: 30,
       periodoInicio: FUTURE_MONDAY_08,
       periodoFim: FUTURE_MONDAY_12,
@@ -155,7 +155,7 @@ describe("buscarJanelasDisponiveis", () => {
     // 2030-01-06T23:30:00Z = Mon 2030-01-07 00:30 BRT (UTC-3)
     // Monday 00:30 BRT is outside 08:00-12:00 availability → 0 windows
     const result = await buscarJanelasDisponiveis.invoke({
-      idProfissional: "dra-ana-costa",
+      idProfissional: "dra-ana-cristina",
       tamanhoJanelaMinutos: 30,
       periodoInicio: "2030-01-06T23:30:00Z",
       periodoFim: "2030-01-07T03:00:00Z",

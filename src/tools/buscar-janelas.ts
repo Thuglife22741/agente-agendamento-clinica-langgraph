@@ -149,7 +149,7 @@ export const buscarJanelasDisponiveis = tool(
     name: "Buscar_janelas_disponiveis",
     description: "Utilize essa ferramenta para buscar as janelas disponíveis no um período especificado. Evite utilizar com janelas de tamanho muito grandes e muito pequenas. Por exemplo, considerando disponibilidade já informada das 08h às 19h:\n\n* Para janelas maiores, não busque com período fora do horário de disponibilidade já informado nas instruções.\n\n\"Quais janelas estão disponíveis amanhã?\"\n- Período início: 08h, período fim: 19h\n- (Ao invés de 00h às 00h do dia seguinte)\n\n* Para janelas menores, insira uma margem antes e depois do horário desejado.\n\n\"O horário das 12h está disponível?\"\n- Período início: 10h, período fim: 14h\n- (Ao invés de 12h às 12h30, para tamanho de janela de 30m)\n\n* Para janelas muito próximas do horário atual, certifique-se de não consultar com período início no passado.\n\n\"Tem algum horário agora de manhã?\" (Mensagem recebida às 09:40)\n- Período início: 10h, período fim: 12h\n- (Ao invés de 09h às 12h, pois 09h já passou) ",
     schema: z.object({
-      idProfissional: z.string().describe("Slug do profissional (ex: dra-ana-costa)"),
+      idProfissional: z.string().describe("Slug do profissional (ex: dra-ana-cristina)"),
       tamanhoJanelaMinutos: z.number().describe("Duração do procedimento em minutos"),
       periodoInicio: z.string().describe("Data/hora inicial no formato YYYY-MM-DDThh:mm:ssTZD"),
       periodoFim: z.string().describe("Data/hora final no formato YYYY-MM-DDThh:mm:ssTZD"),

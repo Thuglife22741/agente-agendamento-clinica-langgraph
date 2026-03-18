@@ -16,7 +16,7 @@ beforeEach(() => {
 describe("atualizarAgendamento", () => {
   test("atualiza evento com sucesso", async () => {
     const result = await atualizarAgendamento.invoke({
-      idProfissional: "dra-ana-costa",
+      idProfissional: "dra-ana-cristina",
       idEvento: "evt-123",
       titulo: "João Silva - Revisão",
       descricao: "Revisão pós-cirurgia",

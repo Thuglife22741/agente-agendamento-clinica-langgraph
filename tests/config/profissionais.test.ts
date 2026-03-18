@@ -2,14 +2,14 @@ import { describe, test, expect } from "bun:test";
 import { profissionais, buscarProfissional } from "../../src/config/profissionais.ts";
 
 describe("profissionais", () => {
-  test("contém 4 profissionais", () => {
-    expect(Object.keys(profissionais).length).toBe(4);
+  test("contém 1 profissional", () => {
+    expect(Object.keys(profissionais).length).toBe(1);
   });
 
   test("buscarProfissional retorna profissional correto", () => {
-    const ana = buscarProfissional("dra-ana-costa");
+    const ana = buscarProfissional("dra-ana-cristina");
     expect(ana).toBeDefined();
-    expect(ana!.nome).toBe("Dra. Ana Costa");
+    expect(ana!.nome).toBe("Dra. Ana Cristina");
     expect(ana!.especialidade).toBe("Clínico Geral, Limpeza");
   });
 
@@ -48,10 +48,7 @@ describe("profissionais", () => {
     }
   });
 
-  test("profissionais IDs corretos", () => {
-    expect(profissionais["dra-ana-costa"]).toBeDefined();
-    expect(profissionais["dr-ricardo-lima"]).toBeDefined();
-    expect(profissionais["dra-beatriz-souza"]).toBeDefined();
-    expect(profissionais["dr-felipe-torres"]).toBeDefined();
+  test("profissional ID correto", () => {
+    expect(profissionais["dra-ana-cristina"]).toBeDefined();
   });
 });
