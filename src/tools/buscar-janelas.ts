@@ -56,6 +56,26 @@ export const buscarJanelasDisponiveis = tool(
       });
     }
 
+    // --- CLAMP DO PERÍODO INÍCIO ---
+    const spInicio = getSpComponents(inicio);
+    const diaSemanaInicio = spInicio.dayOfWeek;
+    const periodosDiaInicio = profissional.disponibilidade[diaSemanaInicio];
+
+    if (periodosDiaInicio && periodosDiaInicio.length > 0) {
+      const primeiroPeriodo = periodosDiaInicio[0];
+      if (primeiroPeriodo) {
+        const [hInicioExpediente, mInicioExpediente] = primeiroPeriodo.inicio.split(":").map(Number);
+        const minutosCursor = spInicio.hour * 60 + spInicio.minute;
+        const minutosExpediente = (hInicioExpediente ?? 0) * 60 + (mInicioExpediente ?? 0);
+
+        if (minutosCursor < minutosExpediente) {
+          const diferencaMinutos = minutosExpediente - minutosCursor;
+          inicio.setTime(inicio.getTime() + diferencaMinutos * 60000);
+          logger.info("tool:buscar-janelas", `Clamp aplicado: periodoInicio ajustado para o inicio do expediente (${primeiroPeriodo.inicio}). Nova data: ${inicio.toISOString()}`);
+        }
+      }
+    }
+
     const fim = new Date(input.periodoFim);
     const granularidade = input.granularidade ?? 30;
     if (!TAMANHOS_VALIDOS.includes(granularidade)) {
